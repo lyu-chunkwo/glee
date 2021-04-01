@@ -1,13 +1,29 @@
-.wide-container {
-	max-width: 1790px;
-	margin: 0 auto;
-	padding: 0 10px;
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	@extend %dmsans-400;
+	outline-color: #fff;
+}
+
+.main {
+	flex-grow: 1;
 }
 
 .container {
-	max-width: 1190px;
+	max-width: 1790px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0 10px;
+
+	&--narrow {
+		max-width: 1190px;
+	}
 }
 
 .title {
@@ -15,4 +31,86 @@
 	font-size: 36px;
 	color: #191919;
 	text-align: center;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.link-button {
+	padding: 23px 98px 20px 28px;
+	color: #fff;
+	background-color: $accent-blue;
+	position: relative;
+	border: 2px solid transparent;
+	transition: border 0.5s;
+	outline-color: #fff;
+
+	&:hover {
+		border: 2px solid #fff;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		background-image: url(../images/svg/arrow.svg);
+		width: 22px;
+		height: 9px;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 18px;
+	}
+}
+
+.filters-list {
+	justify-content: center;
+	display: flex;
+
+	button {
+		padding: 0;
+		outline: transparent;
+	}
+
+	&__item {
+		margin: 0 15px;
+	}
+
+	&__btn {
+		background-color: transparent;
+		border: none;
+		@extend %dmsans-700;
+		font-size: 16px;
+		color: #8b8b8b;
+		transition: color 0.5s;
+		cursor: pointer;
+
+		&:hover {
+			color: #191919;
+		}
+	}
+}
+
+.products-card {
+	width: 270px;
+	margin: 0 14px 35px;
+	background-color: #fff;
+	box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+	position: relative;
+	overflow: hidden;
+	padding: 10px;
+
+	&:hover {
+		.products__box-link {
+			transform: translateY(0);
+		}
+	}
 }

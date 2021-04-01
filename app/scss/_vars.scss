@@ -1,32 +1,47 @@
 $accent: #fcd7b6;
 $accent-blue: #a3bbc8;
-$some-text: #2B6373;
+$text: #7b7b7b;
+$some-text: #2b6373;
 $title: #121212;
+$header-accent: #436372;
+
+%dmsans-400 {
+	font-family: "DMSans", sans-serif;
+	font-weight: 400;
+}
+
+%dmsans-500 {
+	font-family: "DMSans", sans-serif;
+	font-weight: 500;
+}
+
+%dmsans-700 {
+	font-family: "DMSans", sans-serif;
+	font-weight: 700;
+}
+
+%rubik-400 {
+	font-family: "Rubik", sans-serif;
+	font-weight: 400;
+}
+
+%rubik-500 {
+	font-family: "Rubik", sans-serif;
+	font-weight: 500;
+}
+
+%poppins-700 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+}
 
 %transform {
 	transform: translateX(-50%) translateY(-50%);
 }
 
-%dmsans-400 {
-	font-family: 'DMSans-Regular', sans-serif;
-	font-weight: 400;
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
 }
-%dmsans-500 {
-	font-family: 'DMSans-Medium', sans-serif;
-	font-weight: 500;
-}
-
-%dmsans-700 {
-	font-family: 'DMSans-Bold', sans-serif;
-	font-weight: 700;
-}
-
-%rubik-400 {
-	font-family: 'Rubik', sans-serif;
-	font-weight: 400;
-}
-
-%rubik-500 {
-	font-family: 'Rubik', sans-serif;
-	font-weight: 500;
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
 }

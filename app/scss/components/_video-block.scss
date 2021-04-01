@@ -1,0 +1,49 @@
+.video {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 110px;
+
+	&>span {
+		display: none;
+	}
+
+	&__btn {
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 6;
+
+		.play-btn {
+			transition: fill 0.5s;
+			fill: #fff;
+			z-index: 9;
+		}
+		
+		&:hover {
+			.play-btn {
+				fill: $some-text;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			width: 125px;
+			height: 125px;
+			background-color: rgba(163, 187, 200, 0.4);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			background-color: $accent-blue;
+		}
+	}
+}

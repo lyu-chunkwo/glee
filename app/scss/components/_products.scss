@@ -1,0 +1,193 @@
+.products {
+	margin-bottom: 94px;
+
+	.products-title {
+		margin-bottom: 24px;
+	}
+
+	.products__filters {
+		margin-bottom: 80px;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -14px;
+		justify-content: center;
+		margin-bottom: 150px;
+	}
+
+	&__image {
+		min-height: 255px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+	&__info {
+		text-align: center;
+		padding-bottom: 25px;
+		font-size: 16px;
+	}
+
+	&__name {
+		font-weight: 500;
+		color: #243f4d;
+		line-height: 2.5;
+		display: block;
+	}
+
+	&__price {
+		font-weight: 700;
+		color: #a3bbc8;
+	}
+
+	.products-box {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__box-item {
+		margin-right: 15px;
+	}
+
+	&__box-link {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		background-color: #fff;
+		border-radius: 50%;
+		border: 1px solid #a3bbc8;
+		transform: translateY(-600%);
+		transition: transform 0.3s;
+		position: relative;
+
+		.ico {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			fill: #a3bbc8;
+		}
+
+		&:hover {
+			background-color: #a3bbc8;
+			transition: background-color 0.5s;
+
+			.ico {
+				fill: #fff;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.mixitup-control-active {
+		color: #191919;
+	}
+
+	.lamps {
+		display: flex;
+		justify-content: space-between;
+
+		&__item {
+			max-width: 870px;
+			width: 100%;
+			background-color: #feefe2;
+			margin-right: 30px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__inner {
+			height: 390px;
+			max-width: 600px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			position: relative;
+		}
+
+		&__img {
+			position: absolute;
+			max-width: 233px;
+			height: 405px;
+			object-fit: cover;
+			top: -95px;
+			left: 5px;
+		}
+
+		&__box {
+			max-width: 340px;
+		}
+
+		&__box--right {
+			padding-left: 40px;
+		}
+
+		&__title {
+			font-size: 26px;
+			line-height: 1.2;
+			color: #243f4d;
+			font-weight: 700;
+			margin-bottom: 15px;
+			max-height: 65px;
+			overflow: hidden;
+		}
+
+		&__text {
+			@extend %rubik-400;
+			font-size: 16px;
+			line-height: 1.85;
+			color: #243f4d;
+			p {
+				max-height: 60px;
+				overflow: hidden;
+				margin-bottom: 30px;
+			}
+		}
+
+		&__link {
+			background-color: transparent;
+			color: $header-accent;
+			display: inline-block;
+			border: 1px solid #b3b7b5;
+			@extend %rubik-500;
+			font-size: 15px;
+			padding: 15px 83px 15px 20px;
+			border-radius: 3px;
+			position: relative;
+			transition: color 0.5s;
+
+			&:hover {
+				transition: background-color 0.5s;
+				background-color: $accent-blue;
+				border: 1px solid #fff;
+				color: #fff;
+				
+				.lamps-arrow {
+					fill: #fff;
+					transition: fill 0.5s;
+				}
+			}
+
+			.lamps-arrow {
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+				fill: $header-accent;
+			}
+		}
+	}
+}

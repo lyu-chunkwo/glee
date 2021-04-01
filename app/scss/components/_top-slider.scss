@@ -1,0 +1,77 @@
+.top-slider {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	&__item {
+		height: 88vh;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__info {
+		max-width: 417px;
+		@extend %rubik-400;
+	}
+
+	&__title {
+		font-size: 72px;
+		line-height: 1;
+		color: #243f4d;
+		text-transform: uppercase;
+		@extend %rubik-500;
+		display: inline-block;
+		margin-bottom: 30px;
+		height: 140px;
+		overflow: hidden;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 1.7;
+		color: $header-accent;
+		margin-bottom: 55px;
+		height: 65px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__img {
+		max-width: 640px;
+		height: 264px;
+		object-fit: cover;
+	}
+
+	.slick-dots {
+		display: flex;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 44px;
+
+		& button {
+			width: 30px;
+			height: 30px;
+			border: none;
+			margin-right: 12px;
+			border-radius: 50%;
+			background-color: #fde3cc;
+			@extend %rubik-500;
+			font-size: 11px;
+			color: #243f4d;
+			cursor: pointer;
+			outline-color: transparent;
+			transition: background-color 0.5s;
+
+			&:hover {
+				background-color: #fff;
+			}
+		}
+	}
+
+	.slick-active button {
+		background-color: #fff;
+		outline: none;
+	}
+}

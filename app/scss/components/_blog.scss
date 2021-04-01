@@ -1,0 +1,145 @@
+.blog {
+	margin-bottom: -174px;
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 45px;
+	}
+
+	&__link {
+		font-size: 16px;
+		font-weight: 700;
+		color: #262626;
+		position: relative;
+		transition: color 0.5s;
+
+		.view-link {
+			margin-left: 12px;
+		}
+
+		&:hover {
+			color:$accent-blue;
+
+			.view-link {
+				transition: fill 0.5s;
+				fill:$accent-blue;
+			}
+		}
+	}
+
+	&__list	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			.blog__info-link {
+				background-color: #fff;
+				color: $some-text;
+				border: 1px solid $accent-blue;
+			}
+		}
+	}
+
+	&__img {
+		max-width: 370px;
+		min-height: 250px;
+		object-fit: cover;
+		border-radius: 5px 5px 0 0;
+	}
+
+	&__info {
+		padding: 30px 30px 20px 30px;
+		position: relative;
+	}
+
+	&__info-link {
+		position: absolute;
+		top: -16px;
+		left: 28px;
+		background-color: $accent-blue;
+		padding: 5px 32px;
+		border-radius: 17px;
+		color: #fff;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1.4;
+		border: 1px solid transparent;
+		transition: color 0.5s;
+	}
+
+	&__preview {
+		font-size: 18px;
+		font-weight: 500;
+		height: 77px;
+		overflow: hidden;
+		width: 305px;
+		margin-bottom: 5px;
+		color: #262626;
+		display: block;
+	}
+
+	&__bottom {
+		border-top: 1px solid #e0e0e0;
+		padding-top: 10px;
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 2.5;
+		color: #222933;
+		@extend %rubik-400;
+	}
+
+	&__data {
+		margin-right: 20px;
+		position: relative;
+		padding-left: 20px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url(../images/sprite.svg#calendar);
+		}
+	}
+
+	&__author {
+		text-transform: uppercase;
+		transition: color 0.5s;
+		padding-left: 20px;
+		position: relative;
+
+		&:hover {
+			color: $accent-blue;
+
+			.blog-user {
+				transition: fill 0.5s;
+				fill: $accent-blue;
+			}
+		}
+
+		.blog-user {
+			position: absolute;
+			left: 0;
+			top: 1px;
+			margin-right: 8px;
+		}
+	}
+}

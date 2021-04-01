@@ -4,24 +4,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Glee | main</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-	<div class="wide-container">
+	<div class="container">
 		<header class="header">
 			<div class="header__inner">
-				<a class="logo" href="#">
+				<a class="logo" href="index.html">
 					<img class="logo__img" src="images/logo.png" alt="Logo">
 				</a>
 
 				<nav class="menu">
 					<ul class="menu__list">
-						<li class="menu__item"><a class="menu__link" href="#">Home +</a></li>
-						<li class="menu__item"><a class="menu__link" href="#">About</a></li>
+						<li class="menu__item"><a class="menu__link menu__link--active" href="index.html">Home +</a></li>
+						<li class="menu__item"><a class="menu__link" href="page.html">About</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">Services</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">Pages +</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">News</a></li>
@@ -29,369 +32,873 @@
 					</ul>
 				</nav>
 
-				<div class="user-nav">
-					<a class="user-nav__search" href="#"></a>
-					<div class="user-nav__block">
+				<ul class="user-nav">
+					<li class="user-nav__item">
+						<button class="search">
+							<span class="sr-only">Search button</span>
+							<svg class="search-svg" width="18" height="18">
+								<use xlink:href="images/sprite.svg#icon-search"></use>
+							</svg>
+						</button>
+					</li>
+
+					<li class="user-nav__block">
 						<a class="user-nav__link user-nav__link--heart" href="#">
-							<img class="user-nav__img" src="images/heart-icon.png" alt="chosen">
+							<span class="sr-only">Like button</span>
+							<svg class="user-ico heart" width="18" height="18">
+								<use xlink:href="images/sprite.svg#heart2"></use>
+							</svg>
 							<span class="user-nav__num">0</span>
 						</a>
-						<span class="user-nav__separator">|</span>
 						<a class="user-nav__link user-nav__link--cart" href="#">
-							<img class="user-nav__img" src="images/cart-icon.png" alt="chosen">
+							<span class="sr-only">Cart button</span>
+							<svg class="user-ico" width="20" height="20">
+								<use xlink:href="images/sprite.svg#cart"></use>
+							</svg>
 							<span class="user-nav__num">0</span>
 						</a>
-					</div>
-					<button class="user-nav__dropdown" type="button"></button>
-				</div>
+					</li>
+
+					<li class="dropdown">
+						<button class="user-nav__btn" type="button">
+							<span class="sr-only">Cart button</span>
+							<svg class="dropdown-svg" width="20" height="20">
+								<use xlink:href="images/sprite.svg#dropdown"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
 			</div>
 		</header>
+	</div>
 
-		<section class="top-content" style="background-image: url(images/slider-bg.jpg);">
-			<div class="container">
-				<div class="top-content__slider">
-					<div class="top-content__wrapper">
-						<div class="top-content__item">
-							<div class="top-content__text-box">
-								<h1 class="top-content__title">smart and trendy</h1>
-								<p class="top-content__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-									incididunt
-								</p>
-								<a class="top-content__link" href="#">Shop Now</a>
+	<main class="main">
+		<div class="container">
+			<section class="top-slider" style="background-image: url(images/slider-bg.jpg);">
+				<h1 class="sr-only">
+					smart and trendy
+				</h1>
+				<h2 class="sr-only">Slider info</h2>
+				<div class="container container--narrow">
+					<ul class="top-slider__list">
+						<li class="top-slider__wrapper">
+							<div class="top-slider__item">
+								<div class="top-slider__info">
+									<h3 class="top-slider__title">smart and trendy</h3>
+									<div class="top-slider__text">
+										<p>
+											Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+										</p>
+									</div>
+									<a class="link-button" href="#">Shop Now</a>
+								</div>
+								<img class="top-slider__img" src="images/slide-img.png" alt="sofa">
 							</div>
-							<img class="top-content__img" src="images/slide-img.png" alt="sofa">
-						</div>
-					</div>
+						</li>
 
-					<div class="top-content__wrapper">
-						<div class="top-content__item">
-							<div class="top-content__text-box">
-								<h1 class="top-content__title">smart and trendy</h1>
-								<p class="top-content__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-									incididunt
-								</p>
-								<a class="top-content__link" href="#">Shop Now</a>
+						<li class="top-slider__wrapper">
+							<div class="top-slider__item">
+								<div class="top-slider__info">
+									<h3 class="top-slider__title">smart and trendy</h3>
+									<div class="top-slider__text">
+										<p>
+											Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+										</p>
+									</div>
+									<a class="link-button" href="#">Shop Now</a>
+								</div>
+								<img class="top-slider__img" src="images/slide-img.png" alt="sofa">
 							</div>
-							<img class="top-content__img" src="images/slide-img.png" alt="sofa">
-						</div>
-					</div>
+						</li>
 
-					<div class="top-content__wrapper">
-						<div class="top-content__item">
-							<div class="top-content__text-box">
-								<h1 class="top-content__title">smart and trendy</h1>
-								<p class="top-content__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-									incididunt
-								</p>
-								<a class="top-content__link" href="#">Shop Now</a>
+						<li class="top-slider__wrapper">
+							<div class="top-slider__item">
+								<div class="top-slider__info">
+									<h3 class="top-slider__title">smart and trendy</h3>
+									<div class="top-slider__text">
+										<p>
+											Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+										</p>
+									</div>
+									<a class="link-button" href="#">Shop Now</a>
+								</div>
+								<img class="top-slider__img" src="images/slide-img.png" alt="sofa">
 							</div>
-							<img class="top-content__img" src="images/slide-img.png" alt="sofa">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<div class="top-info">
-			<div class="top-info__item">
-				<div class="top-info__point"></div>
-				<div class="top-info__text top-info__text--support">
-					<h5 class="top-info__title">Support 24/7.</h5>
-					<p>Contact us 24 hours a day,</p>
-					<p>7 days a week.</p>
-				</div>
-			</div>
-
-			<div class="top-info__item">
-				<div class="top-info__point"></div>
-				<div class="top-info__text top-info__text--delivery">
-					<h5 class="top-info__title">Delivery.</h5>
-					<p>Free shipping on all US order.</p>
-				</div>
-			</div>
-
-			<div class="top-info__item">
-				<div class="top-info__point"></div>
-				<div class="top-info__text top-info__text--payment">
-					<h5 class="top-info__title">100% Payment secure.</h5>
-					<p>We ensure secure payment with PEV.</p>
-				</div>
-			</div>
-		</div>
-
-		<section class="products">
-			<div class="container">
-				<h2 class="title">Products of the week</h2>
-
-				<div class="products__filter">
-					<button class="products__filter-btn" type="button" data-filter="all">All</button>
-					<button class="products__filter-btn" type="button" data-filter=".category-a">Furnitures</button>
-					<button class="products__filter-btn" type="button" data-filter=".category-b">Chairs</button>
-					<button class="products__filter-btn" type="button" data-filter=".category-c">Lighting</button>
-					<button class="products__filter-btn" type="button" data-filter=".category-d">Decor</button>
-				</div>
-
-				<div class="products__content">
-					<div class="products__card mix category-a" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product1.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">Wooden radio</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-
-					<div class="products__card mix category-a" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product2.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">Wooden chair</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-
-					<div class="products__card mix category-b" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product3.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">Wooden radio</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-
-					<div class="products__card mix category-b" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product4.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">Retro table</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-
-					<div class="products__card mix category-c" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product5.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">Wooden radio</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-
-					<div class="products__card mix category-c" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product6.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">Wooden chair</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-
-					<div class="products__card mix category-d" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product7.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">White chair</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-
-					<div class="products__card mix category-d" data-fancybox="gallery">
-						<a class="products__image" href="#">
-							<img class="products__img" src="images/product8.png" alt="Wooden radio">
-						</a>
-						<div class="products__info">
-							<a href="#" class="products__name">Retro table</a>
-							<span class="products__price">$29.00</span>
-						</div>
-						<div class="products__box-links">
-							<a class="products__box-link products__box-link--search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-								<path id="Forma_1" data-name="Forma 1" class="products__ico" fill= "#a3bac7" d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z" transform="translate(-800 -1563)"/>
-							</svg></a>
-							<a class="products__box-link products__box-link--heart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
-								<path id="Forma_1" data-name="Forma 1" fill="#a3bbc8" fill-rule="evenodd" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
-							</svg></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__items">
-					<div class="footer__item">
-						<a class="logo" href="#">
-							<img class="logo__img" src="images/logo.png" alt="Logo">
-						</a>
-						<address class="footer__contacts">
-							<p class="footer__text"><span>ADDRESS</span>: 4772 Wines Lane Houston, TX 77032</p>
-							<a href="tel: +8323475843" class="footer__text"><span>Telephone</span>: +832-347-5843</a>
-							<a href="email: contact@Glee.com" class="footer__text"><span>Email</span>: contact@Glee.com</a>
-						</address>
-					</div>
-
-					<div class="footer__item">
-						<h4 class="footer__title">Services</h4>
-						<ul class="footer__list">
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">About us</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">Return Policy</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">Our Blog</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">Contact Us</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">Terms & Condition</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="footer__item">
-						<h4 class="footer__title">account</h4>
-						<ul class="footer__list">
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">You account</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">Checkout</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">Login</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">Register</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="footer__item">
-						<h4 class="footer__title">newsletter</h4>
-						<p class="footer__text footer__text--last">
-							Subscribe by our newsletter and get update protidin.
-						</p>
-						<form class="footer__form">
-							<input class="footer__email" type="email" placeholder="Email address">
-							<button class="footer__btn" type="button">Subscribe</button>
-						</form>
-					</div>
-				</div>
-
-
-				<div class="footer-copy">
-					<p class="footer-copy__text">
-						©2020 CopyRight Example. All rights reserved.
-					</p>
-					<ul class="footer-copy__list">
-						<li class="footer-copy__item">
-							<a href="#" class="footer-copy__link">Home</a>
-						</li>
-						<li class="footer-copy__item">
-							<a href="#" class="footer-copy__link">About</a>
-						</li>
-						<li class="footer-copy__item">
-							<a href="#" class="footer-copy__link">Blog</a>
-						</li>
-						<li class="footer-copy__item">
-							<a href="#" class="footer-copy__link">Contact</a>
 						</li>
 					</ul>
 				</div>
+			</section>
+		</div>
+
+		<div class="container">
+			<ul class="top-info">
+				<li class="top-info__item">
+					<div class="top-info__box top-info__box--support">
+						<span class="top-info__title">Support 24/7.</span>
+						<div class="top-info__text">
+							<p>Contact us 24 hours a day,</p>
+							<p>7 days a week.</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="top-info__item">
+					<div class="top-info__box top-info__box--delivery">
+						<span class="top-info__title">Delivery.</span>
+						<div class="top-info__text">
+							<p>Free shipping on all US order.</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="top-info__item">
+					<div class="top-info__box top-info__box--payment">
+						<span class="top-info__title">100% Payment secure.</span>
+						<div class="top-info__text">
+							<p>We ensure secure payment</p>
+							<p>with PEV.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<section class="products">
+			<div class="container container--narrow">
+				<h3 class="title products-title">Products of the week</h3>
+
+				<div class="products__filters">
+					<ul class="filters-list">
+						<li class="filters-list__item">
+							<button class="filters-list__btn" type="button" data-filter="all">All</button>
+						</li>
+						<li class="filters-list__item ">
+							<button class="filters-list__btn" type="button" data-filter=".category-a">Furnitures</button>
+						</li>
+						<li class=" filters-list__item ">
+							<button class="filters-list__btn" type="button" data-filter=".category-b">Chairs</button>
+						</li>
+						<li class=" filters-list__item ">
+							<button class="filters-list__btn" type="button" data-filter=".category-c">Lighting</button>
+						</li>
+						<li class=" filters-list__item ">
+							<button class="filters-list__btn" type="button" data-filter=".category-d">Decor</button>
+						</li>
+					</ul>
+				</div>
+
+				<ul class=" products__list">
+					<li class="products__item">
+						<article class="products-card mix category-a" data-fancybox="gallery">
+							<a class="products__image" href="#">
+								<img class="products__img " src="images/product1.png " alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">Wooden radio</a></h3>
+								<span class="products__price ">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only ">Search link</span>
+										<svg class="ico " width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only ">Send to cart</span>
+										<svg class="ico " width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li class="products__item">
+						<article class="products-card mix category-a" data-fancybox="gallery">
+							<a class="products__image" href="#">
+								<img class="products__img" src="images/product2.png" alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">Wooden chair</a></h3>
+								<span class="products__price">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Search link</span>
+										<svg class="ico" width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to cart</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li class="products__item">
+						<article class="products-card mix category-b" data-fancybox="gallery">
+							<a class="products__image" href="#">
+								<img class="products__img" src="images/product3.png" alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">Wooden radio</a></h3>
+								<span class="products__price">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Search link</span>
+										<svg class="ico " width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only ">Send to cart</span>
+										<svg class="ico " width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li class="products__item">
+						<article class="products-card mix category-b" data-fancybox="gallery">
+							<a class="products__image " href="# ">
+								<img class="products__img" src="images/product4.png" alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">Retro table</a></h3>
+								<span class="products__price">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Search link</span>
+										<svg class="ico" width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link " href="#">
+										<span class="sr-only">Send to cart</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li class="products__item">
+						<article class="products-card mix category-c" data-fancybox="gallery">
+							<a class="products__image" href="#">
+								<img class="products__img" src="images/product5.png" alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">Wooden radio</a></h3>
+								<span class="products__price">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Search link</span>
+										<svg class="ico" width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to cart</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li class="products__item">
+						<article class="products-card mix category-c" data-fancybox="gallery">
+							<a class="products__image " href="# ">
+								<img class="products__img" src="images/product6.png" alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">Wooden chair</a></h3>
+								<span class="products__price">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link " href="#">
+										<span class="sr-only ">Search link</span>
+										<svg class="ico" width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to cart</span>
+										<svg class="ico " width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li class="products__item">
+						<article class="products-card mix category-d" data-fancybox="gallery">
+							<a class="products__image" href="#">
+								<img class="products__img" src="images/product7.png" alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">White chair</a></h3>
+								<span class="products__price">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Search link</span>
+										<svg class="ico" width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to cart</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart "></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li class="products__item">
+						<article class="products-card mix category-d" data-fancybox="gallery">
+							<a class="products__image" href="#">
+								<img class="products__img" src="images/product8.png" alt="Wooden radio">
+							</a>
+							<div class="products__info">
+								<h3><a class="products__name" href="#">Retro table</a></h3>
+								<span class="products__price">$29.00</span>
+							</div>
+
+							<ul class="products-box">
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Search link</span>
+										<svg class="ico" width="20" height="20">
+											<use xlink:href="images/sprite.svg#product-search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to cart</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-cart"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="products__box-item">
+									<a class="products__box-link" href="#">
+										<span class="sr-only">Send to like</span>
+										<svg class="ico" width="22" height="20">
+											<use xlink:href="images/sprite.svg#product-heart"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</article>
+					</li>
+				</ul>
 			</div>
-		</footer>
-		<script src="js/main.min.js"></script>
-	</div>
+			<div class="container">
+				<div class="lamps">
+					<div class="lamps__item">
+						<div class="lamps__inner">
+							<img class="lamps__img" src="images/lamp1.png" alt="lamp">
+							<div class="lamps__box">
+								<h3 class="lamps__title ">Mirum Notare Tellus</h3>
+								<div class="lamps__text">
+									<p>
+										LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+									</p>
+									<a href="#" class="lamps__link">
+										View More
+										<svg class="lamps-arrow" width="22" height="9">
+											<use xlink:href="images/sprite.svg#arrow "></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="lamps__item">
+						<div class="lamps__inner">
+							<img class="lamps__img" src="images/lamp2.png" alt="lamp">
+							<div class="lamps__box lamps__box--right">
+								<h3 class="lamps__title">Malesuada Tempor Euismod</h3>
+								<div class="lamps__text">
+									<p>
+										50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
+									</p>
+									<a href="#" class="lamps__link">
+										View More
+										<svg class="lamps-arrow" width="22" height="9">
+											<use xlink:href="images/sprite.svg#arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="design">
+			<div class="container container--narrow">
+				<h3 class="title design-title ">New Design</h3>
+
+				<div class="design__filters">
+					<ul class="filters-list">
+						<li class="filters-list__item">
+							<button class="filters-list__btn" type="button" data-filter="all">All</button>
+						</li>
+						<li class="filters-list__item">
+							<button class="filters-list__btn" type="button" data-filter=".category-1">Furnitures</button>
+						</li>
+						<li class=" filters-list__item">
+							<button class="filters-list__btn" type="button" data-filter=".category-2">Chairs</button>
+						</li>
+						<li class=" filters-list__item">
+							<button class="filters-list__btn" type="button" data-filter=".category-3">Lighting</button>
+						</li>
+						<li class=" filters-list__item">
+							<button class="filters-list__btn" type="button" data-filter=".category-4">Decor</button>
+						</li>
+					</ul>
+				</div>
+
+				<ul class=" design__list">
+					<li class="design__item mix category-1" style="background-image: url(images/design/1.jpg);">
+						<article class="design__box">
+							<h3 class="design__title">
+								Beat Flat Pendant Black
+							</h3>
+							<span class="design__text">
+								Classic
+							</span>
+						</article>
+					</li>
+
+					<li class="design__item mix category-1" style="background-image: url(images/design/2.jpg);">
+						<article class="design__box">
+							<h3 class="design__title">
+								Lampe Sur Pieds Bamboo
+							</h3>
+							<span class="design__text">
+								Classic
+							</span>
+						</article>
+					</li>
+
+					<li class="design__item mix category-2" style="background-image: url(images/design/3.jpg);">
+						<article class="design__box">
+							<h3 class="design__title">
+								Rattan Rocking Chair
+							</h3>
+							<span class="design__text">
+								Classic
+							</span>
+						</article>
+					</li>
+
+					<li class="design__item mix category-2" style="background-image: url(images/design/4.jpg);">
+						<article class="design__box">
+							<h3 class="design__title">
+								Rattan Rocking Chair
+							</h3>
+							<span class="design__text">
+								Classic
+							</span>
+						</article>
+					</li>
+
+					<li class="design__item mix category-3" style="background-image: url(images/design/5.jpg);">
+						<article class="design__box">
+							<h3 class="design__title">
+								Rattan Rocking Chair
+							</h3>
+							<span class="design__text">
+								Classic
+							</span>
+						</article>
+					</li>
+
+					<li class="design__item mix category-4" style="background-image: url(images/design/6.jpg);">
+						<article class="design__box">
+							<h3 class="design__title">
+								Lampe Sur Pieds Bamboo
+							</h3>
+							<span class="design__text">
+								Classic
+							</span>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="video" style="background-image: url(images/video-bg.jpg);">
+			<a href="https://youtu.be/AeMQq7OhbO8" class="video__btn" data-fancybox>
+				<span class="sr-only">Video play button</span>
+				<svg class="play-btn" width="22" height="25">
+					<use xlink:href="images/sprite.svg#play"></use>
+				</svg>
+			</a>
+		</div>
+
+		<section class="blog">
+			<div class="container container--narrow">
+				<div class="blog__top">
+					<h3 class="title blog-title">Our Insights & Articles</h3>
+					<a class="blog__link" href="#">
+						View All
+						<svg class="view-link" width="11" height="11">
+							<use xlink:href="images/sprite.svg#view-link"></use>
+						</svg>
+					</a>
+				</div>
+
+				<ul class="blog__list">
+					<li class="blog__item">
+						<article class="blog__box">
+							<a class="blog__img-link" href="#">
+								<img class="blog__img" src="images/blog/1.jpg" alt="Blog Image">
+							</a>
+							<div class="blog__info">
+								<a class="blog__info-link" href="#">news</a>
+								<h3>
+									<a class="blog__preview" href="#">
+										Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+									</a>
+								</h3>
+								<div class="blog__bottom">
+									<span class="blog__text blog__data">28 JANUARY, 2020</span>
+									<a class="blog__text blog__author" href="#">
+										<svg class="blog-user" width="12" height="12">
+											<use xlink:href="images/sprite.svg#user-1"></use>
+										</svg>
+										by admin
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="blog__item">
+						<article class="blog__box">
+							<a class="blog__img-link" href="#">
+								<img class="blog__img" src="images/blog/2.jpg" alt="Blog Image">
+							</a>
+							<div class="blog__info">
+								<a class="blog__info-link" href="#">news</a>
+								<h3>
+									<a class="blog__preview" href="#">
+										Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+									</a>
+								</h3>
+								<div class="blog__bottom">
+									<span class="blog__text blog__data">28 JANUARY, 2020</span>
+									<a class="blog__text blog__author" href="#">
+										<svg class="blog-user" width="12" height="12">
+											<use xlink:href="images/sprite.svg#user-1"></use>
+										</svg>
+										by admin
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="blog__item">
+						<article class="blog__box">
+							<a class="blog__img-link" href="#">
+								<img class="blog__img" src="images/blog/3.jpg" alt="Blog Image">
+							</a>
+							<div class="blog__info">
+								<a class="blog__info-link" href="#">news</a>
+								<h3>
+									<a class="blog__preview" href="#">
+										Rncididunt ut labore et dolore magna aliqua. Ut enim
+									</a>
+								</h3>
+								<div class="blog__bottom">
+									<span class="blog__text blog__data">28 JANUARY, 2020</span>
+									<a class="blog__text blog__author" href="#">
+										<svg class="blog-user" width="12" height="12">
+											<use xlink:href="images/sprite.svg#user-1"></use>
+										</svg>
+										by admin
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="partners-slider">
+			<div class="container container--narrow">
+				<ul class="partners-slider__list">
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/1.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/2.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/3.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/4.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/5.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/1.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/2.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/3.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/4.png" alt="partners">
+						</div>
+					</li>
+					<li class="partners-slider__item">
+						<div class="partners-slider__box">
+							<img class="partners-slider__img" src="images/partners/5.png" alt="partners">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+	<footer class=" footer">
+		<div class="container container--narrow">
+			<div class="footer__items">
+				<div class="footer__item">
+					<a class="logo" href="#">
+						<img class="logo__img" src="images/logo.png" alt="Logo">
+					</a>
+					<address class="footer__contacts">
+						<div class="footer__text">
+							<p>
+								<span>address</span>: 4772 Wines Lane Houston, TX 77032
+							</p>
+						</div>
+						<a class="footer__text" href="tel:+8323475843">
+							<span>Telephone</span>: +832-347-5843
+						</a>
+						<a class="footer__text" href="mailto:contact@Glee.com">
+							<span>Email</span>: contact@Glee.com
+						</a>
+					</address>
+				</div>
+
+				<div class="footer__item footer__item--services">
+					<span class="footer__title">Services</span>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">About us</a>
+						</li>
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">Return Policy</a>
+						</li>
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">Our Blog</a>
+						</li>
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">Contact Us</a>
+						</li>
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">Terms & Condition</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__item footer__item--account">
+					<span class="footer__title">account</span>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">You account</a>
+						</li>
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">Checkout</a>
+						</li>
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">Login</a>
+						</li>
+						<li class="footer__list-item">
+							<a class="footer__list-link" href="#">Register</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__item">
+					<span class="footer__title">newsletter</span>
+					<div class="footer__text footer__text--last">
+						<p>
+							Subscribe by our newsletter and get update protidin.
+						</p>
+					</div>
+					<form class="footer__form">
+						<label class="sr-only" for="email">Email address</label>
+						<input class="footer__email" id="email" type="email" name="email" placeholder="Email address">
+						<button class="footer__btn" type="button">Subscribe</button>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="footer-copy">
+				<div class="footer-copy__text">
+					<p>
+						©2020 CopyRight Example. All rights reserved.
+					</p>
+				</div>
+				<ul class="footer-copy__list">
+					<li class="footer-copy__item">
+						<a href="#" class="footer-copy__link">Home</a>
+					</li>
+					<li class="footer-copy__item">
+						<a href="#" class="footer-copy__link">About</a>
+					</li>
+					<li class="footer-copy__item">
+						<a href="#" class="footer-copy__link">Blog</a>
+					</li>
+					<li class="footer-copy__item">
+						<a href="#" class="footer-copy__link">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="js/main.min.js"></script>
 </body>
 
 </html>
