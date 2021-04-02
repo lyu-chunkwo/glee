@@ -19,13 +19,23 @@
 		margin: 0 14px 30px;
 		max-width: 370px;
 		width: 100%;
+		border: 2px solid transparent;
+		transition: border-color 0.5s;
+
+		&:hover {
+			border: 2px solid $accent-blue;
+		}
+	}
+	
+	&__box {
 		height: 250px;
+		padding: 40px 0 0 35px;
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
 
-	&__box {
-		padding: 40px 0 0 35px;
+	&__link {
+
 	}
 
 	&__title {
