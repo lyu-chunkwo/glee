@@ -16,14 +16,9 @@
 		outline: transparent;
 		padding-top: 10px;
 
-		.view-link {
-			margin-left: 12px;
-		}
-
 		&:hover {
 			color: $accent-blue;
-
-			.view-link {
+			.blog__view-link {
 				transition: fill 0.5s;
 				fill: $accent-blue;
 			}
@@ -36,6 +31,10 @@
 		&:active {
 			box-shadow: 0 0 0 3px #009dff;
 		}
+	}
+
+	&__view-link {
+		margin-left: 12px;
 	}
 
 	&__list {
@@ -90,6 +89,15 @@
 		border: 1px solid transparent;
 		transition: color 0.5s;
 		outline: transparent;
+
+		&:focus {
+			@extend %shadow;
+		}
+
+		&:active {
+			background-color: $header-accent;
+			color: #fff;
+		}
 	}
 
 	&__preview {
@@ -124,21 +132,10 @@
 		}
 	}
 
-	&__info-link {
-		&:focus {
-			@extend %shadow;
-		}
-
-		&:active {
-			background-color: $header-accent;
-			color: #fff;
-		}
-	}
-
 	&__preview {
 		&:focus {
-				color: $text;
-		} 
+			color: $text;
+		}
 	}
 
 	&__bottom {
@@ -151,9 +148,10 @@
 		line-height: 2.5;
 		color: #222933;
 		@extend %rubik-400;
+		text-transform: uppercase;
 	}
 
-	&__data {
+	&__text--data {
 		margin-right: 20px;
 		position: relative;
 		padding-left: 20px;
@@ -170,8 +168,7 @@
 		}
 	}
 
-	&__author {
-		text-transform: uppercase;
+	&__text--author {
 		transition: color 0.5s;
 		padding-left: 20px;
 		position: relative;
@@ -179,8 +176,7 @@
 
 		&:hover {
 			color: $accent-blue;
-
-			.blog-user {
+			.blog__user-ico {
 				transition: fill 0.5s;
 				fill: $accent-blue;
 			}
@@ -193,12 +189,12 @@
 		&:active {
 			box-shadow: 0 0 0 3px $active;
 		}
+	}
 
-		.blog-user {
-			position: absolute;
-			left: 0;
-			top: 0;
-			margin-right: 8px;
-		}
+	&__user-ico {
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-right: 8px;
 	}
 }

@@ -6,7 +6,7 @@
 			@extend %shadow;
 		}
 	}
-	
+
 	&__title {
 		margin-bottom: 24px;
 	}
@@ -14,7 +14,6 @@
 	&__filters {
 		margin-bottom: 70px;
 	}
-
 
 	&__list {
 		display: flex;
@@ -68,7 +67,7 @@
 		color: #a3bbc8;
 	}
 
-	.products-box {
+	&__box {
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -92,33 +91,26 @@
 		transition: transform 0.3s;
 		position: relative;
 		outline: transparent;
-		border: 1px solid #A2BAC7;
+		border: 1px solid #a2bac7;
+		cursor: pointer;
 
 		&:focus {
 			@extend %shadow;
-		}
-
-		&:active {
-			background-color: $header-accent;
-
-			.ico {
-				fill: #fff;
-			}
-		}
-
-		.ico {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			fill: #a3bbc8;
 		}
 
 		&:hover {
 			background-color: $accent-blue;
 			transition: background-color 0.5s;
 
-			.ico {
+			.products__box-ico {
+				fill: #fff;
+			}
+		}
+
+		&:active {
+			background-color: $header-accent;
+
+			.products__box-ico {
 				fill: #fff;
 			}
 		}
@@ -128,14 +120,36 @@
 		}
 	}
 
-	.mixitup-control-active {
-		color: #191919;
+	&__box-ico {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		fill: #a3bbc8;
+	}
+}
+
+.products-card {
+	width: 270px;
+	margin: 0 14px 35px;
+	background-color: #fff;
+	box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+	position: relative;
+	overflow: hidden;
+	padding: 10px;
+
+	&:hover {
+		.products__box-link {
+			transform: translateY(0);
+		}
 	}
 }
 
 .lamps {
-	display: flex;
-	justify-content: space-between;
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
 
 	&__item {
 		max-width: 870px;
@@ -197,7 +211,7 @@
 		margin-bottom: 30px;
 	}
 
-	&__link {
+	&--link {
 		background-color: transparent;
 		color: $header-accent;
 		display: inline-block;
@@ -215,22 +229,23 @@
 			border: 1px solid #fff;
 			color: #fff;
 
-			&:focus {
-				background-color: $header-accent;
-			}
-
-			.lamps-arrow {
+			.lamps__arrow {
 				fill: #fff;
 				transition: fill 0.5s;
 			}
-		}
 
-		.lamps-arrow {
-			position: absolute;
-			right: 20px;
-			top: 50%;
-			transform: translateY(-50%);
-			fill: $header-accent;
+			&:focus {
+				background-color: $header-accent;
+				color: #fff;
+			}
 		}
+	}
+
+	&__arrow {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		fill: $header-accent;
 	}
 }

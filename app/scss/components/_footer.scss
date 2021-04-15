@@ -11,7 +11,7 @@
 		width: 195px;
 	}
 
-	&__links {
+	&__text--links {
 		display: block;
 		transition: background-color, color 0.5s;
 		position: relative;
@@ -38,15 +38,17 @@
 		}
 	}
 
-	&__item--services {
-		margin-right: 77px;
+	&__item {
+		&--services {
+			margin-right: 77px;
+		}
+
+		&--account {
+			margin-right: 106px;
+		}
 	}
 
-	&__item--account {
-		margin-right: 106px;
-	}
-
-	&__text--last {
+	&__text--subscribe {
 		width: 240px;
 		@include text-limit;
 		-webkit-line-clamp: 5;
@@ -79,11 +81,11 @@
 			color: $header-accent;
 		}
 	}
+}
 
-	&__form {
-		display: flex;
-		margin-top: 35px;
-	}
+.footer-form {
+	display: flex;
+	margin-top: 35px;
 
 	&__email {
 		padding: 12px 15px;
@@ -101,15 +103,6 @@
 		}
 	}
 
-	.form-state {
-		&:hover {
-			box-shadow: 0 0 0 1px #87cefa;
-		}
-
-		&:focus {
-			box-shadow: 0 0 0 1px #009dff;
-		}
-	}
 	&__btn {
 		padding: 0 18px;
 		color: #fff;
@@ -124,6 +117,18 @@
 		&:active {
 			background-color: $header-accent;
 		}
+	}
+}
+
+.form-state {
+	transition: box-shadow 0.5s;
+
+	&:hover {
+		box-shadow: 0 0 0 1px #87cefa;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 1px #009dff;
 	}
 }
 

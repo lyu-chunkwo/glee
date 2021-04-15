@@ -1,7 +1,7 @@
 .design {
 	margin-bottom: 90px;
 
-	.design-title {
+	&--title {
 		margin-bottom: 20px;
 	}
 
@@ -21,35 +21,37 @@
 		max-width: 370px;
 		width: 100%;
 		border: 2px solid transparent;
-		transition: border-color 0.5s;
-		outline: transparent;
-
-		&:hover {
-			border: 2px solid $accent-blue;
-		}
 	}
 
 	&__link {
 		outline: transparent;
+
+		&:hover {
+			.design__inner {
+				border: 2px solid $accent-blue;
+			}
+		}
+		
 		&:focus {
-			.design__box {
+			.design__inner {
 				@extend %shadow;
 			}
 		}
 
 		&:active {
-			.design__box {
+			.design__inner {
 				box-shadow: 0 0 0 3px #009dff;
 			}
 		}
 	}
 
-	&__box {
+	&__inner {
 		height: 250px;
 		padding: 40px 0 0 35px;
 		background-repeat: no-repeat;
 		background-position: center center;
-		
+		border: 2px solid transparent;
+		transition: border 0.5s;
 	}
 
 	&__title {

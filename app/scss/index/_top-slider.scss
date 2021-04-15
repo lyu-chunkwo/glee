@@ -35,19 +35,6 @@
 		-webkit-line-clamp: 4;
 	}
 
-	.link-button {
-		&::after {
-			content: "";
-			position: absolute;
-			background-image: url(../images/svg/arrow.svg);
-			width: 22px;
-			height: 9px;
-			top: 50%;
-			transform: translateY(-50%);
-			right: 18px;
-		}
-	}
-
 	&__img {
 		max-width: 640px;
 		height: 264px;
@@ -92,5 +79,18 @@
 	.slick-active button {
 		background-color: #fff;
 		outline: none;
+	}
+}
+
+.button {
+	&::after {
+		content: "";
+		position: absolute;
+		background-image: url(../images/sprite.svg#arrow);
+		width: 23px;
+		height: 23px;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 18px;
 	}
 }

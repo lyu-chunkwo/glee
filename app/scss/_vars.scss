@@ -4,7 +4,7 @@ $text: #7b7b7b;
 $some-text: #2b6373;
 $title: #121212;
 $header-accent: #436372;
-$shadow: #87CEFA;
+$shadow: #87cefa;
 $active: #009dff;
 
 %dmsans-400 {
@@ -42,7 +42,7 @@ $active: #009dff;
 }
 
 %shadow {
-	box-shadow: 0 0 10px rgba(36,63,77, 0.5);
+	box-shadow: 0 0 10px rgba(36, 63, 77, 0.5);
 }
 
 @function max($numbers...) {
@@ -60,29 +60,29 @@ $active: #009dff;
 }
 
 @mixin state {
-		&:after {
-			content: "";
-			background-color: $header-accent;
-			position: absolute;
-			width: 0;
-			height: 2px;
-			transition: width 0.3s linear;
-		}
-	
-		&:after {
-			top: 100%;
-			left: 0;
-		}
-	
-		&:hover::after {
-			width: 100%;
-		}
-
-		&:focus {
-			border: 1px dashed $active;
-		}
-
-		&:active {
-			color: $active;
-		}
+	&:after {
+		content: "";
+		background-color: $header-accent;
+		position: absolute;
+		width: 0;
+		height: 2px;
+		transition: width 0.3s linear;
 	}
+
+	&:after {
+		top: 100%;
+		left: 0;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+
+	&:focus {
+		border: 1px dashed $active;
+	}
+
+	&:active {
+		color: $active;
+	}
+}
