@@ -4,12 +4,18 @@ $(function() {
 		dots: true
 	});
 
-	$('.partners-slider__list').slick({
-		arrows: false,
-		slidesToShow: 5,
-  	slidesToScroll: 1,
-		autoplay: true,
+
+	
+	$(".stars").rateYo({
+		starWidth: "40px",
+		normalFill: "#A0A0A0",
+		ratedFill: "#E74C3C"
+  });
+
+	$('.menu__btn').on('click', function () {
+		$('.menu__list').toggleClass('menu__list--active');
 	});
+
 
 	const mix1 = document.querySelector('.products__list');
 	const mix2 = document.querySelector('.design__list');
@@ -29,11 +35,33 @@ $(function() {
 			}
 		})
 	}
-	
-	$(".stars").rateYo({
-		starWidth: "40px",
-		normalFill: "#A0A0A0",
-		ratedFill: "#E74C3C"
-  });
+
+	$('.partners-slider__list').slick({
+		arrows: false,
+		slidesToShow: 5,
+  	slidesToScroll: 1,
+		autoplay: true,
+		responsive: [
+			{
+				breakpoint: 951,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					infinite: false,
+					dots: false
+				}
+			},
+
+			{
+				breakpoint: 861,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: false,
+					dots: false
+				}
+			},
+		]
+	});
 
 });

@@ -9,7 +9,7 @@ const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
 
 function svgSprites() {
-	return src('app/images/svg/**.svg')
+	return src('app/images/ico/**.svg')
 	.pipe(svgSprite({
 		mode: {
 			stack: {
@@ -17,7 +17,7 @@ function svgSprites() {
 			}
 		}
 	}))
-	.pipe(dest('app/images'))
+	.pipe(dest('app/images/svg-sprite'))
 }
 
 function browsersync() {
@@ -47,6 +47,8 @@ function scripts() {
 			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 			'node_modules/mixitup/dist/mixitup.js',
 			'node_modules/rateyo/src/jquery.rateyo.js',
+			'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+			'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -75,7 +77,9 @@ function build() {
   return src([
       'app/**/*.html',
       'app/css/style.min.css',
-      'app/js/main.min.js'
+      'app/js/main.min.js',
+      'app/fonts/*.woff',
+      'app/fonts/*.woff2'
     ], { base: 'app' })
     .pipe(dest('dist'))
 }
@@ -85,12 +89,11 @@ function cleanDist() {
 }
 
 function watching() {
-	watch(['app/scss/**/*.scss'], styles);
+  watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch(['app/images/svg/**.svg'], svgSprites);
+	watch(['app/images/ico/**.svg'], svgSprites);
 }
-
 
 exports.styles = styles;
 exports.scripts = scripts;
@@ -98,6 +101,5 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.svgSprites = svgSprites;
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, svgSprites, watching);

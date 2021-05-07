@@ -23,36 +23,9 @@ body {
 	&:focus {
 		border: 2px dashed $shadow;
 	}
-	
+
 	&:active {
 		border: 2px dashed $active;
-	}
-}
-
-.menu {
-	margin-left: 140px;
-
-	&__list {
-		display: flex;
-		align-items: center;
-	}
-
-	&__item {
-		margin: 0 16px;
-	}
-
-	&__link {
-		text-decoration: none;
-		color: $header-accent;
-		@extend %rubik-500;
-		font-size: 15px;
-		padding-bottom: 2px;
-		border-bottom: 2px solid transparent;
-		transition: border-bottom 0.5s;
-		outline: transparent;
-		padding: 5px 0;
-		position: relative;
-		@include state;
 	}
 }
 
@@ -100,6 +73,14 @@ body {
 	font-size: 36px;
 	color: #191919;
 	text-align: center;
+
+	@media (max-width: 1200px) {
+		font-size: 28px;
+	}
+
+	@media (max-width: 860px) {
+		font-size: 26px;
+	}
 }
 
 .sr-only {
@@ -141,6 +122,10 @@ body {
 .filters-mix {
 	justify-content: center;
 	display: flex;
+
+	@media (max-width: 450px) {
+		flex-wrap: wrap;
+	}
 
 	&__item {
 		margin: 0 15px;

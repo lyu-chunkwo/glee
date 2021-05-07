@@ -4,6 +4,10 @@
 		justify-content: space-between;
 		background-color: #fef7f0;
 		margin-bottom: 60px;
+
+		@media (max-width: 950px) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
@@ -15,6 +19,13 @@
 		justify-content: center;
 		position: relative;
 
+		@media (max-width: 950px) {
+			border-right: none;
+			border-bottom: 1px solid #e8e4df;
+			justify-content: flex-start;
+			padding-left: 15px;
+		}
+
 		&:last-child {
 			border: none;
 		}
@@ -22,6 +33,10 @@
 	&__box {
 		position: relative;
 		padding-left: 80px;
+
+		@media (max-width: 450px) {
+			padding-left: 65px;
+		}
 
 		&::before,
 		&::after {
@@ -52,6 +67,10 @@
 
 	&__box--delivery::after {
 		background-image: url(../images/svg/info-img2.svg);
+		
+		@media (max-width: 950px) {
+			top: 10px;
+		}
 	}
 
 	&__box--payment::after {

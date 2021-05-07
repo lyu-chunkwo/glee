@@ -6,11 +6,127 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 49px 0;
+		
+		@media (max-width: 620px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.menu {
+	margin-left: 140px;
+
+	@media (max-width: 1200px) {
+		margin-left: 0;
+		order: 1;
+	}
+
+	@media (max-width: 620px) {
+		order: 0;
+	}
+	
+	&__btn {
+		display: none;
+		
+		@media (max-width: 1200px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 40px;
+			height: 28px;
+			border: none;
+			padding: 0;
+			position: relative;
+			cursor: pointer;
+			background-color: transparent;
+
+			span {
+				width: 100%;
+				height: 3px;
+				background-color: $header-accent;
+			}
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background-color: $header-accent;
+			}
+			
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+		}
+	}
+	
+	&__list {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 1200px) {
+			position: absolute;
+			top: 130px;
+			left: 0;
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+			z-index: 5;
+			background-color: #fff;
+			transform: translateY(-200%);
+			transition: transform 0.5s;
+
+			&.menu__list--active {
+				transform: translateY(0%);
+			}
+		}
+
+		@media (max-width: 620px) {
+			top: 180px;
+		}
+	}
+
+	&__item {
+		margin: 0 16px;
+
+		@media (max-width: 1200px) {
+			margin-right: 0;
+			text-align: center;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $header-accent;
+		@extend %rubik-500;
+		font-size: 15px;
+		padding-bottom: 2px;
+		border-bottom: 2px solid transparent;
+		transition: border-bottom 0.5s;
+		outline: transparent;
+		padding: 5px 0;
+		position: relative;
+		@include state;
+
+		@media (max-width: 1200px) {
+			width: 100%;
+			margin-bottom: 20px;
+			display: block;
+		}
 	}
 }
 
 .search {
 	margin-right: 20px;
+
+	@media (max-width: 450px) {
+		margin-right: 10px;
+	}
 
 	&:hover {
 		.user-nav__search {
@@ -22,6 +138,11 @@
 .user-nav {
 	display: flex;
 
+	@media (max-width: 620px) {
+		width: 100%;
+		padding-top: 20px;
+	}
+
 	&__item {
 		&--block {
 			display: flex;
@@ -31,6 +152,10 @@
 			border-radius: 50px;
 			width: 180px;
 			position: relative;
+
+			@media (max-width: 450px) {
+				margin-right: 10px;
+			}
 		}
 
 		&--dropdown {

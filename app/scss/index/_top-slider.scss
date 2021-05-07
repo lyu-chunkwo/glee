@@ -8,12 +8,20 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media (max-width: 860px) {
+		height: 58vh;
+		}
 	}
 
 	&__info {
 		max-width: 420px;
 		@extend %rubik-400;
 		padding: 0 0 80px 3px;
+
+		@media (max-width: 6200px) {
+		max-width: 100%;
+		}	
 	}
 
 	&__title {
@@ -24,6 +32,14 @@
 		@extend %rubik-500;
 		margin-bottom: 30px;
 		@include text-limit;
+
+		@media (max-width: 1200px) {
+			font-size: 58px;
+		}
+
+		@media (max-width: 450px) {
+		font-size: 47px;
+		}
 	}
 
 	&__text {
@@ -39,6 +55,15 @@
 		max-width: 640px;
 		height: 264px;
 		object-fit: cover;
+
+		@media (max-width: 1200px) {
+			max-width: 40%;
+			object-fit: contain;
+		}
+
+		@media (max-width: 860px) {
+			display: none;
+		}
 	}
 
 	.slick-dots {
@@ -92,5 +117,11 @@
 		top: 50%;
 		transform: translateY(-50%);
 		right: 18px;
+	}
+}
+
+.slick-slide img {
+	@media (max-width: 860px) {
+		display: none;
 	}
 }

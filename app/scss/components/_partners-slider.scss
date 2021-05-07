@@ -1,9 +1,13 @@
 .partners-slider {
 	background-color: #fef7f0;
-	height: 440px;
+	height: 435px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+
+	@media (max-width: 1200px) {
+		height: 250px;
+	}
 	
 	&__box {
 		height: 260px;

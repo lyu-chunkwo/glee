@@ -4,6 +4,10 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid #dae4e9;
+
+		@media (max-width: 950px) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__contacts {
@@ -39,12 +43,36 @@
 	}
 
 	&__item {
+		@media (max-width: 620px) {
+			width: 100%;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #dae4e9;
+			padding-bottom: 10px;
+			width: 100%;
+			
+			&:last-child {
+				border-bottom: none;
+			}
+		}
 		&--services {
 			margin-right: 77px;
+
+			@media (max-width: 900px) {
+				padding-left: 20px;
+			}
+
+			@media (max-width: 620px) {
+				padding-left: 0;
+				margin-right: 0;
+			}
 		}
 
 		&--account {
 			margin-right: 106px;
+
+			@media (max-width: 620px) {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -63,6 +91,10 @@
 		font-size: 16px;
 		line-height: 1.3px;
 		color: #1f2044;
+
+		@media (max-width: 620px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__list-item {
@@ -141,6 +173,10 @@
 	color: $text;
 	@extend %rubik-400;
 
+	@media (max-width: 620px) {
+		display: block;
+	}
+
 	&__list {
 		display: flex;
 	}
@@ -149,9 +185,28 @@
 		padding: 0 15px;
 		border-right: 1px solid $text;
 
+		@media (max-width: 620px) {
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+
 		&:last-child {
 			padding-right: 0;
 			border-right: none;
+		}
+	}
+
+	&__text {
+		p {
+			line-height: 1.2;
+
+			@media (max-width: 450px) {
+				font-size: 13px;
+			}
+		}
+		@media (max-width: 620px) {
+			margin-bottom: 20px;
 		}
 	}
 

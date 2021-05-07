@@ -4,6 +4,10 @@
 	background-size: cover;
 	margin-bottom: 110px;
 
+	@media (max-width: 450px) {
+		margin-bottom: 55px;
+	}
+
 	& span {
 		display: none;
 	}
@@ -24,6 +28,10 @@
 		position: relative;
 		z-index: 6;
 		outline: transparent;
+
+		@media (max-width: 450px) {
+			height: 250px;
+		}
 
 		&:hover {
 			.video__btn {
