@@ -7,7 +7,31 @@ $(function() {
 		infinite: false,
 
 		prevArrow: '<button class="slick-btn slick-prev"><img src="images/ico/prev.svg" alt="prev"></button>',
-	  nextArrow: '<button class="slick-btn slick-next"><img src="images/ico/next.svg" alt="next"></button>'
+	  nextArrow: '<button class="slick-btn slick-next"><img src="images/ico/next.svg" alt="next"></button>',
+
+		responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 901,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 651,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
 	});
 
 
